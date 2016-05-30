@@ -1,0 +1,16 @@
+Minesweeper yo
+<div>
+    <div style="font-size:0;" *ngFor="let r of tiles">
+        <div style="display:inline-block" *ngFor="let c of r"> 
+            <tile [tile]="c" (onTileShown)="onTileShown($event)"></tile>
+        </div>
+        <br/>
+    </div>
+    
+    <div style="font-size:0;" *ngFor="let r of debugTiles">
+        <div style="display:inline-block" *ngFor="let c of r"> 
+            <tile [tile]="c" (onTileShown)="onTileShown($event)"></tile>
+        </div>
+        <br/>
+    </div>
+</div>
